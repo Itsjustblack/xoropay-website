@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import { openInNewTab } from "@/lib/utils";
 
 export default function NavBar() {
 	return (
@@ -29,6 +30,7 @@ export default function NavBar() {
 
 					<Link
 						href="#"
+						onClick={() => openInNewTab("https://docs.xoropay.com/")}
 						className="flex flex-col justify-center text-[#312d2bcc] text-xs md:text-sm font-medium hover:text-black"
 					>
 						Docs
@@ -36,6 +38,7 @@ export default function NavBar() {
 				</div>
 				<Button
 					variant="outline"
+					onClick={() => openInNewTab("https://dashboard.xoropay.com/")}
 					className="rounded-full border-0 text-[#37322F] text-xs md:text-[13px] font-medium px-5 h-auto"
 				>
 					Log in
